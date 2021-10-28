@@ -25,6 +25,4 @@ Route::get('/home', [
     HomeController::class, 'index'
 ])->name('home');
 
-
-
-Route::resource('shoes', App\Http\Controllers\shoesController::class);
+Route::resource('studentinformations', App\Http\Controllers\studentinformationsController::class);

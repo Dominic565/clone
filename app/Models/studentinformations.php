@@ -7,21 +7,23 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
- * Class shoes
+ * Class studentinformations
  * @package App\Models
- * @version October 28, 2021, 2:16 am UTC
+ * @version October 28, 2021, 3:21 am UTC
  *
- * @property string $Brand
  * @property string $Name
- * @property integer $Prize
+ * @property integer $Age
+ * @property integer $ContactNO
+ * @property string $Address
+ * @property string $Gender
+ * @property string $Citizenship
  */
-class shoes extends Model
+class studentinformations extends Model
 {
-    
 
     use HasFactory;
 
-    public $table = 'shoes';
+    public $table = 'studentinformations';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
@@ -32,9 +34,12 @@ class shoes extends Model
 
 
     public $fillable = [
-        'Brand',
         'Name',
-        'Prize'
+        'Age',
+        'ContactNO',
+        'Address',
+        'Gender',
+        'Citizenship'
     ];
 
     /**
@@ -44,9 +49,12 @@ class shoes extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'Brand' => 'string',
         'Name' => 'string',
-        'Prize' => 'integer'
+        'Age' => 'integer',
+        'ContactNO' => 'integer',
+        'Address' => 'string',
+        'Gender' => 'string',
+        'Citizenship' => 'string'
     ];
 
     /**
@@ -55,9 +63,12 @@ class shoes extends Model
      * @var array
      */
     public static $rules = [
-        'Brand' => 'required|string|max:255',
         'Name' => 'required|string|max:255',
-        'Prize' => 'required|integer',
+        'Age' => 'required|integer',
+        'ContactNO' => 'required|integer',
+        'Address' => 'required|string|max:255',
+        'Gender' => 'required|string|max:255',
+        'Citizenship' => 'required|string|max:255',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
     ];

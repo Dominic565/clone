@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1>Create Shoes</h1>
+                    <h1>Create Studentinformations</h1>
                 </div>
             </div>
         </div>
@@ -17,19 +17,19 @@
 
         <div class="card">
 
-            {!! Form::open(['route' => 'shoes.store']) !!}
+            {!! Form::open(['route' => 'studentinformations.store']) !!}
 
             <div class="card-body">
 
                 <div class="row">
-                    @include('shoes.fields')
+                    @include('studentinformations.fields')
                 </div>
 
             </div>
 
             <div class="card-footer">
                 {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-                <a href="{{ route('shoes.index') }}" class="btn btn-default">Cancel</a>
+                <a href="{{ route('studentinformations.index') }}" class="btn btn-default">Cancel</a>
             </div>
 
             {!! Form::close() !!}
